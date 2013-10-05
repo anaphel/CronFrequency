@@ -1,7 +1,7 @@
 CronFrequency
 =============
 
-Try to make the cron frequency easy to read.
+Try to make the cron frequency easy to read.  
 Example : 30 19 1 * * -> every 1st of the month at 19:30
 
 How to use it
