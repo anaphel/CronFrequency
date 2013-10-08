@@ -15,8 +15,6 @@ How to use it
 Here is a sample if you receive the data from POST.
 
 ```php
-$data = explode(' ', $_POST['cronFrequency']);
-list($minute, $hour, $dayOfMonth, $month, $dayOfWeek) = $data;
-$cron = new CronFrequency($minute, $hour, $dayOfMonth, $month, $dayOfWeek);
+$cron = new CronFrequency('0 23 * * 0-4');
 echo $cron->toHuman();
 ```

@@ -76,22 +76,24 @@ class CronFrequency
     );
 
     /**
-     * Feed the constructor with everything it needs
+     * Feed the constructor with the cron frequency
      * 
-     * @param string $minute
-     * @param string $hour
-     * @param string $dayOfMonth
-     * @param string $month
-     * @param string $dayOfWeek
+     * @param string $cronFrequency
      * @return void
      */
-    public function __construct($minute, $hour, $dayOfMonth, $month, $dayOfWeek)
+    public function __construct($cronFrequency)
     {
-        $this->_minute = $minute;
-        $this->_hour = $hour;
-        $this->_dayOfMonth = $dayOfMonth;
-        $this->_month = $month;
-        $this->_dayOfWeek = $dayOfWeek;
+        $data = explode(' ', $cronFrequency, 5);
+        if (count($data) === 5) {
+            list($minute, $hour, $dayOfMonth, $month, $dayOfWeek) = $data;
+            $this->_minute = $minute;
+            $this->_hour = $hour;
+            $this->_dayOfMonth = $dayOfMonth;
+            $this->_month = $month;
+            $this->_dayOfWeek = $dayOfWeek;
+        } else {
+            throw new Exception('Cron frequency must countain 5 informations');
+        }
     }
 
     public function toHuman()
