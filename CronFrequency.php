@@ -92,7 +92,7 @@ class CronFrequency
             $this->_month = $month;
             $this->_dayOfWeek = $dayOfWeek;
         } else {
-            throw new Exception('Cron frequency must countain 5 informations');
+            throw new InvalidArgumentException('Cron frequency must countain 5 informations');
         }
     }
 
