@@ -85,12 +85,7 @@ class CronFrequency
     {
         $data = explode(' ', $cronFrequency, 5);
         if (count($data) === 5) {
-            list($minute, $hour, $dayOfMonth, $month, $dayOfWeek) = $data;
-            $this->_minute = $minute;
-            $this->_hour = $hour;
-            $this->_dayOfMonth = $dayOfMonth;
-            $this->_month = $month;
-            $this->_dayOfWeek = $dayOfWeek;
+            list($this->_minute, $this->_hour, $this->_dayOfMonth, $this->_month, $this->_dayOfWeek) = $data;
         } else {
             throw new InvalidArgumentException('Cron frequency must countain 5 informations');
         }
@@ -298,10 +293,7 @@ class CronFrequency
      */
     private function _every($field)
     {
-        if ($field === '*') {
-            return true;
-        }
-        return false;
+        return $field === '*';
     }
 
     /**
