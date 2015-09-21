@@ -79,7 +79,7 @@ class CronFrequency
      * Feed the constructor with the cron frequency
      * 
      * @param string $cronFrequency
-     * @return void
+     * @return CronFrequency
      */
     public function __construct($cronFrequency)
     {
