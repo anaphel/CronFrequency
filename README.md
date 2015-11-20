@@ -7,7 +7,7 @@ Example : 30 19 1 * * -> every 1st of the month at 19:30
 Tool
 -------------------------
 
-You can test it on [this dedicated page](http://www.hatier.me/~louis/cron-frequency/).
+You can test it on [this dedicated page](http://louis.hatier.me/cron-frequency/).
 
 How to use it
 -------------------------
